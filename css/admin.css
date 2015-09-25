@@ -1,0 +1,43 @@
+/* -----------------------------------------------------------------------
+
+
+ Blueprint CSS Framework 1.0.1
+ http://blueprintcss.org
+
+   * Copyright (c) 2007-Present. See LICENSE for more info.
+   * See README for instructions on how to use Blueprint.
+   * For credits and origins, see AUTHORS.
+   * This is a compressed file. See the sources in the 'src' directory.
+
+----------------------------------------------------------------------- */
+
+/* print.css */
+body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
+.nx
+{
+	border: 1px solid black; /* Параметры границы */
+}
+
+.nx tr.nx_tr 
+{
+    background: none repeat scroll 0 0 #F5D1D1;
+}
+.nx tr.nxeven 
+{
+    background: none repeat scroll 0 0 #D1F5D1;
+}
+.nx tr.nxodd
+{
+    background: none repeat scroll 0 0 #D1D1F5;
+}.nx tr.nxself
+{
+    background: none repeat scroll 0 0 rgb(221, 173, 240);
+	color:#fff;
+	font-weight:bold;
+}
+
+.nx tr:hover, .nx tr:hover
+{
+    background: none repeat scroll 0 0 rgb(62, 155, 228);
+	cursor:pointer ;
+}

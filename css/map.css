@@ -1,0 +1,168 @@
+  h2 
+   {
+   margin:2px;
+   padding:2px 10px;
+	font-size: 16px;
+   
+   }   
+   .maps 
+   {
+	float: left; /* Обтекание по правому краю */
+	width:680px;
+	height:550px ;
+    border: 3px solid #004C6F;
+	}
+   .mapsi
+   {
+	float: left; /* Обтекание по правому краю */
+	width:630px; /*	Обтекание по правому краю */
+	height:600px ;
+	margin:0 5px 5px 0;
+    border: 3px solid #004C6F;
+} 
+   .mapsis
+   {
+	width:600px; /*	Обтекание по правому краю */
+/*		width:100%;/* Обтекание по правому краю */
+	height:400px ;
+	margin: 5px 0;
+	} 
+#map_pic
+{
+	background-image: url("reg/leningrad_obl_map.png");
+}
+#map_wheel
+{
+	position:absolute;
+	top:350px;
+	left:200px;
+	background-image: url("sprite.png");
+	width:108px; /*	Обтекание по правому краю */
+	height:108px ;
+	background-position:-404px -482px;
+}
+.layers
+{	
+	position:absolute;
+	height: 550px;
+	width:680px;
+    border: 3px solid transparent;/**/
+}
+
+#bb_pics img
+{
+	width:600px;
+}
+
+.topnav {
+	font-family: "europebold";
+	width: 260px;
+	padding: 20px 18px 5px 10px;
+	font-family: "CenturyGothicRegular", "Century Gothic", Arial, Helvetica, sans-serif;
+	border: solid 1px;
+	margin-bottom:8px;
+/*	background-color:#bf9;*/
+}
+
+ul.topnav {
+/*	float:left;
+	margin: 5px;*/
+	padding: 0;	
+	font-size: 1em;
+	line-height: 1em;
+	list-style: none;
+}
+
+ul.topnav li {
+	margin: 2px;
+	list-style: none;
+	background: #004C6F;
+}
+
+ul.topnav li a {
+	line-height: 10px;
+	background: #004C6F;
+	font-size: 0.8em;
+	padding: 10px 15px;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+ul.topnav li img {
+	width: 200px;
+}
+
+ul.topnav li a:hover {
+/*	background-color:#675C7C;*/
+	text-decoration: underline;
+	color:#F72579;
+}
+
+ul.topnav ul {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+
+ul.topnav ul li {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+ul.topnav ul li a {
+	color: #000;
+	padding: 5px 15px 5px 20px;
+	background-color:#EFFDFF;
+	font-size: 11px;
+	font-weight: normal;
+	outline:0;
+	text-align: left;
+}
+
+ul.topnav ul li a:hover {
+	background-color:#D3C99C;
+	color:#675C7C;
+}
+
+ul.topnav ul ul li a {
+	color:silver;
+	padding-left: 40px;
+}
+
+ul.topnav ul ul li a:hover {
+	background-color:#D3CEB8;
+	color:#675C7C;
+}
+
+ul.topnav span{
+	float:right;
+	font-size:2em;
+	padding-right:.5em;
+}
+
+.chk
+{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 4px;
+    background-image: url(sprite.png);
+    background-repeat: no-repeat;
+    background-position:-1px -2px;  
+	float:left;
+}
+.chkd
+{
+   display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 4px;
+    background-image: url(sprite.png);
+    background-repeat: no-repeat;
+    background-position:-20px -2px;  
+	float:left;
+
+}

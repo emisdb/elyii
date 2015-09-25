@@ -1,0 +1,26 @@
+
+/* modmap.css */
+body {line-height:1.5;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;color:#000;background:none;font-size:10pt;}
+.layers
+{	
+	position:absolute;
+	top:120px;
+	height: 550px;
+	width:680px;
+}
+
+#mymap
+{
+	border: 1px solid black; /* Параметры границы */
+	background-image: url("reg/mapbg.jpg");
+
+}
+#map_div
+{
+	margin-top: 600px; /* Параметры границы */
+}
+#listik
+{	
+	float:left;
+	margin-left:700px;
+}
