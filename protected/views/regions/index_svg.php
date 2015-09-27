@@ -2,6 +2,7 @@
 	$this->widget('ext.dosvg.dosvg',array(
 					'tree'=>$model->getRegionMap(),
 					'mode'=>'map',
+					'svgid'=>'svg_map',
 					'class'=>'maps',
 					'width'=>680,
 					'height'=>550,

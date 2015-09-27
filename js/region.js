@@ -97,8 +97,9 @@ function gofind() {
  }
    function omover (id,x) {
   		$("#k"+id).css('background-position', '-'+x+'px -2px');
-
-						}
+                doc=document.getElementById("svg_map");
+                doc=doc.getElementById("svg_map");
+ 						}
   function omout (id) {
 		for (i=0;i<sel_arr.length;i++)
 		{
