@@ -81,22 +81,64 @@ class Regions extends CActiveRecord
 			'regions1' => array(self::HAS_MANY, 'Regions', 'next'),
 		);
 	}
-       public function getRegionTree($model=null)
-        {
-            $issuesArray=array();
-            if(is_null($model)) $issues=$this->regions_null;
-            else $issues=$model->regions;
-            foreach ($issues as $value) {
-                $arr=array('name'=>$value->name,
+	private function createTree(&$list, $parent){
+	   $tree = array();
+	   $ordered=array();
+	   $arr=array();
+	  
+	   foreach ($parent as $k=>$value){
+				$link=chtml::link("x",array('regions/update','id'=>$value->id));
+				$pos=strpos($link,"href=");
+				$link=  substr($link,$pos+6, strpos($link,"\"",$pos+6)-$pos-6);
+			   $arr=array('name'=>$value->name,
+							'link'=>$link,
 							'id'=>$value->id,
 							'next'=>$value->next,
-							'position'=>$value->position,
+//							'position'=>$value->position,
                     );
-                if(count($value->regions)>0) $arr['items']=$this->getRegionTree($value);
-               $issuesArray[]=$arr; 
-            }
-            return $issuesArray;
-        }
+		   if(isset($list[$value['id']])){
+			   $arr['items'] = $this->createTree($list, $list[$value['id']]);
+		   }
+		   if(is_null($value['next']))  {
+			   $ordered[]=$arr;
+		   }
+			 else {
+				 $tree[]=$arr;
+		   }
+	   }
+	   if(count($ordered)==0) return null;
+	   $res=true;
+	   $poi=$ordered[0]['id'];
+	   while($res){
+		  $res=false;
+		  foreach ($tree as $value){
+			  if($value['next']==$poi)
+			  {
+				  $res=true;
+				  $ordered[]=$value;
+				  $poi=$value['id'];
+				  break;
+			  }
+		 }
+	   }
+	   return $ordered;
+   }
+	public function getRegionTree()
+        {
+	           $regArray=array();
+			   
+				$arri=new CActiveDataProvider($this, array('pagination'=>false));
+				$arr=$arri->getData();
+				$new = array();
+				foreach ($arr as $a){
+					$new[$a['region_id']][] = $a;
+				}
+				$tree = $this->createTree($new, $new['']); // changed
+	
+			   return $tree;
+ 	   
+	   }
+ 
        public function getRegionMap()
         {
            $arr=array();

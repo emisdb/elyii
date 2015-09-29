@@ -31,7 +31,7 @@ class RegionsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete'),
+				'actions'=>array('create','update','admin','admins','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -215,6 +215,15 @@ class RegionsController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+	public function actionAdmins($id=null)
+	{
+//		$this->layout='//layouts/nocolumn';
+		$model=  Regions::model()->getRegionTree();
+		
+		$this->render('admin_svg',array(
+			'model'=>$model,'params'=>$id,
 		));
 	}
 

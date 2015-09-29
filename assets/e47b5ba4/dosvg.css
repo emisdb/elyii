@@ -1,0 +1,6 @@
+line.cityroad, polyline.cityroad{stroke:#336666; stroke-width:4;fill:none;}
+line.cityroad-select, polyline.cityroad-select{stroke:#f72579;stroke-width:5;opacity:.9;fill:none;}
+circle.cityroad{fill:#dededd; stroke:#336666; stroke-width:1;}
+circle.cityroad-select{fill:#f72579;stroke-width:3;stroke:#f72579;}
+.city-title{font-size:8pt;font-weight:normal;font-family:Arial Black;}
+.road-title{fill:#f72579;font-size:8pt;font-weight:normal;font-family:Arial Black;}

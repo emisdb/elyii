@@ -13,6 +13,7 @@ class bccWidget extends CWidget {
 	protected $line_open;
 	protected $arr_coor;
 
+	public $func=true;
 	public $togo;
 	public $model;
 	public $columns;
@@ -132,9 +133,15 @@ class bccWidget extends CWidget {
 		{
 			if(strlen($this->action)==0)
 			{
-				echo ("<li onmouseover='omover(\"$id\",682)' onmouseout='omout(\"$id\")'");
+				if($this->func)
+					echo ("<li onmouseover='omover(\"$id\",682)' onmouseout='omout(\"$id\")'");
+				else
+					echo ("<li onmouseover='onmover(\"$id\")' onmouseout='onmout(\"$id\")'");
 				if($id==$this->active)	echo (" class=\"active\" ");
-				echo ("><div class='chk' id='ch$id' onclick='checkit(\"$id\")'></div><a href='#' onclick='checkit(\"$id\")' id='rg$id'>");
+				if($this->func)
+					echo ("><div class='chk' id='ch$id' onclick='checkit(\"$id\")'></div><a href='#' onclick='checkit(\"$id\")' id='rg$id'>");
+				else
+					echo ("><div class='chk' id='ch$id' onclick='checkiti(\"$id\")'></div><a href='#' onclick='checkiti(\"$id\")' id='rg$id'>");
 //				$this->fetchList($id,null);	
 				$this->ret_value[]=$id;
 			}

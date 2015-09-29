@@ -54,6 +54,7 @@
 	$obj=$this->widget('ext.bccWidget',array('model'=>$model,
 								'columns'=>array(array('','name')),
 								'id'=>'id',
+								'func'=>false,
 								'togo'=>'prods/group',
 								'next'=>'next',
 								'par'=>'region_id',
