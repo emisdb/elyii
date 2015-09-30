@@ -8395,3 +8395,638 @@ REQUEST_URI=/elyii/index.php?r=regions/admins
 in C:\OpenServer\domains\localhost\elyii\protected\extensions\dosvg\dosvg.php (164)
 in C:\OpenServer\domains\localhost\elyii\protected\extensions\dosvg\dosvg.php (199)
 in C:\OpenServer\domains\localhost\elyii\protected\extensions\dosvg\dosvg.php (261)
+2015/09/30 10:55:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admins".' in D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(270): CController->missingAction('admins')
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admins')
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/elyii/index.php?r=site/admins
+---
+2015/09/30 10:55:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Системе не удалось найти запрашиваемое действие "admins".' in D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(270): CController->missingAction('admins')
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/admins')
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/elyii/index.php?r=site/admins
+---
+2015/09/30 13:36:58 [error] [php] Missing argument 1 for Regions::donext(), called in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php on line 124 and defined (D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php:84)
+Stack trace:
+#0 unknown(0): RegionsController->actionAdmins()
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): RegionsController->runAction()
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): RegionsController->filterAccessControl()
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): RegionsController->runActionWithFilters()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): RegionsController->run()
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CWebApplication->run()
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:17,%22e%22:18,%22a%22:%22ma%22}
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (84)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (124)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (231)
+2015/09/30 14:13:29 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "dosvg.rows".' in D:\denis\OpenServer\domains\localhost\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\views\regions\admin_svg.php(34): CComponent->__get('rows')
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(126): require('D:\denis\OpenSe...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\denis\OpenSe...', Array, true)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\denis\OpenSe...', Array, true)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(782): CController->renderPartial('admin_svg', Array, true)
+#5 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(238): CController->render('admin_svg', Array)
+#6 [internal function]: RegionsController->actionAdmins('{"t":20,"e":1,"...')
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#19 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#20 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:20,%22e%22:1,%22a%22:%22ma%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins&id={%22t%22:15,%22e%22:16,%22a%22:%22mb%22}
+---
+2015/09/30 15:56:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:289
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":..,"e":15,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:..,%22e%22:15,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 15:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:289
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":..,"e":15,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:..,%22e%22:15,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 15:59:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:290
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":..,"e":15,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:..,%22e%22:15,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 15:59:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:290
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":..,"e":15,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:..,%22e%22:15,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:01:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:290
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":..,"e":15,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:..,%22e%22:15,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,,"a":"c...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:17:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(269): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"t":25,"e":25,...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:25,%22e%22:25,,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:20:21 [error] [php] urlencode() expects parameter 1 to be string, object given (D:\denis\OpenServer\domains\localhost\yii\framework\web\CUrlManager.php:440)
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\web\CUrlManager.php(310): CUrlManager->createUrlDefault()
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(551): CUrlManager->createUrl()
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(967): CWebApplication->createUrl()
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1028): RegionsController->createUrl()
+#4 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(273): RegionsController->redirect()
+#5 unknown(0): RegionsController->actionAdmins()
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): RegionsController->runAction()
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): RegionsController->filterAccessControl()
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): RegionsController->runActionWithFilters()
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): RegionsController->run()
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CWebApplication->run()
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22t%22:25,%22e%22:25,%22a%22:%22ca%22}
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (273)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)
+2015/09/30 16:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:290
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(268): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:28:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:28:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:28:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:29:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:292
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(270): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"ca...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22ca%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:34:27 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Regions.nexttname".' in D:\denis\OpenServer\domains\localhost\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('nexttname')
+#1 D:\denis\OpenServer\domains\localhost\elyii\protected\views\regions\_form.php(28): CActiveRecord->__get('nexttname')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(126): require('D:\denis\OpenSe...')
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\denis\OpenSe...', Array, true)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\denis\OpenSe...', Array, true)
+#5 D:\denis\OpenServer\domains\localhost\elyii\protected\views\regions\create.php(15): CController->renderPartial('_form', Array)
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(126): require('D:\denis\OpenSe...')
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\denis\OpenSe...', Array, true)
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\denis\OpenSe...', Array, true)
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(116): CController->render('create', Array)
+#11 [internal function]: RegionsController->actionCreatein('{"t":14,"e":14,...')
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('createin')
+#23 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/createi...')
+#24 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#25 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A14%2C%22e%22%3A14%2C%22a%22%3A%22ca%22%7D
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 16:52:11 [warning] [application] Не удалось присвоить небезопасный атрибут "position" класса "Regions".
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (90)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)
+2015/09/30 16:52:58 [warning] [application] Не удалось присвоить небезопасный атрибут "position" класса "Regions".
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (90)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)
+2015/09/30 16:52:58 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (id<>48) LIMIT 1' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `regions` `t` WHERE (next=) AND (id<>48) LIMIT 1.
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (102)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (131)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (91)
+2015/09/30 16:52:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (id<>48) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `regions` `t` WHERE (next=) AND (id<>48) LIMIT 1' in D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(102): CActiveRecord->find(Object(CDbCriteria))
+#4 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(131): Regions->donext('')
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1100): Regions->afterSave()
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#7 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(91): CActiveRecord->save()
+#8 [internal function]: RegionsController->actionCreatein('{"t":25,"e":25,...')
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('createin')
+#20 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/createi...')
+#21 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A25%2C%22e%22%3A25%2C%22a%22%3A%22cb%22%7D
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A25%2C%22e%22%3A25%2C%22a%22%3A%22cb%22%7D
+---
+2015/09/30 17:03:34 [warning] [application] Не удалось присвоить небезопасный атрибут "position" класса "Regions".
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (90)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)
+2015/09/30 17:03:34 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (id!=49) LIMIT 1' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `regions` `t` WHERE (next=) AND (id!=49) LIMIT 1.
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (107)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (135)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (91)
+2015/09/30 17:03:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (id!=49) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `regions` `t` WHERE (next=) AND (id!=49) LIMIT 1' in D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(107): CActiveRecord->find(Object(CDbCriteria))
+#4 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(135): Regions->donext('')
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1100): Regions->afterSave()
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#7 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(91): CActiveRecord->save()
+#8 [internal function]: RegionsController->actionCreatein('{"t":15,"e":15,...')
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('createin')
+#20 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/createi...')
+#21 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A15%2C%22e%22%3A15%2C%22a%22%3A%22cb%22%7D
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A15%2C%22e%22%3A15%2C%22a%22%3A%22cb%22%7D
+---
+2015/09/30 18:02:18 [warning] [application] Не удалось присвоить небезопасный атрибут "position" класса "Regions".
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (90)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)
+2015/09/30 18:02:18 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetch(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (NOT(id=50)) LIMIT 1' at line 1. Выполнявшийся SQL-запрос: SELECT * FROM `regions` `t` WHERE (next=) AND (NOT(id=50)) LIMIT 1.
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (107)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php (135)
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (91)
+2015/09/30 18:02:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND (NOT(id=50)) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `regions` `t` WHERE (next=) AND (NOT(id=50)) LIMIT 1' in D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(107): CActiveRecord->find(Object(CDbCriteria))
+#4 D:\denis\OpenServer\domains\localhost\elyii\protected\models\Regions.php(135): Regions->donext('')
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(1100): Regions->afterSave()
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\db\ar\CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#7 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(91): CActiveRecord->save()
+#8 [internal function]: RegionsController->actionCreatein('{"t":15,"e":15,...')
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('createin')
+#20 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/createi...')
+#21 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#22 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A15%2C%22e%22%3A15%2C%22a%22%3A%22cb%22%7D
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/createin&id=%7B%22t%22%3A15%2C%22e%22%3A15%2C%22a%22%3A%22cb%22%7D
+---
+2015/09/30 18:09:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(268): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"cb...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins
+---
+2015/09/30 18:11:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(268): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":25,"a":"cb...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:25,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins&id={%22t%22:48,%22e%22:14,%22a%22:%22ma%22}
+---
+2015/09/30 18:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(268): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":22,"a":"ci...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:22,%22a%22:%22ci%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins&id={%22t%22:48,%22e%22:14,%22a%22:%22ma%22}
+---
+2015/09/30 18:16:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php:291
+Stack trace:
+#0 D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php(268): RegionsController->loadModel(NULL)
+#1 [internal function]: RegionsController->actionAdmins('{"e":19,"a":"cb...')
+#2 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(RegionsController), Array)
+#3 D:\denis\OpenServer\domains\localhost\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RegionsController), Object(ReflectionMethod), Array)
+#4 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\denis\OpenServer\domains\localhost\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 D:\denis\OpenServer\domains\localhost\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(282): CController->run('admins')
+#13 D:\denis\OpenServer\domains\localhost\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('regions/admins')
+#14 D:\denis\OpenServer\domains\localhost\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#15 D:\denis\OpenServer\domains\localhost\elyii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/elyii/index.php?r=regions/admins&id={%22e%22:19,%22a%22:%22cb%22}
+HTTP_REFERER=http://localhost/elyii/index.php?r=regions/admins&id={%22t%22:48,%22e%22:14,%22a%22:%22ma%22}
+---
+2015/09/30 18:23:13 [warning] [application] Не удалось присвоить небезопасный атрибут "position" класса "Regions".
+in D:\denis\OpenServer\domains\localhost\elyii\protected\controllers\RegionsController.php (90)
+in D:\denis\OpenServer\domains\localhost\elyii\index.php (13)

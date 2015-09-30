@@ -1,15 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Regions'=>array('index'),
-	$model->name=>array('view','id'=>$model->id),
+	'Администрирование регионов'=>array('admins'),
 	'Update',
 );
 
 $this->menu=array(
-	array('label'=>'List Regions', 'url'=>array('index')),
-	array('label'=>'Create Regions', 'url'=>array('create')),
-	array('label'=>'View Regions', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Regions', 'url'=>array('admin')),
+	array('label'=>'Список регионов', 'url'=>array('index')),
+	array('label'=>'Администрирование регионов', 'url'=>array('admins')),
 );
 ?>
 

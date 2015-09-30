@@ -1,5 +1,5 @@
 <?php
-
+/**/
 class RegionsController extends Controller
 {
 	/**
@@ -31,7 +31,7 @@ class RegionsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','admins','delete'),
+				'actions'=>array('create','createin','update','admin','admins','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -75,6 +75,44 @@ class RegionsController extends Controller
 
 		$this->render('create',array(
 			'model'=>$model,
+		));
+	}
+	public function actionCreatein($id=null)
+	{
+		$model=new Regions;
+		$comm=json_decode($id);
+ 
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Regions']))
+		{
+			$model->attributes=$_POST['Regions'];
+			if($model->save())
+				$this->redirect(array('admins'));
+		}
+                  $rec=$this->loadModel($comm->e);
+ 		if($comm->a=="ca")
+                {
+                    $model->setAttribute('next', $rec->id);
+                    $model->setAttribute('region_id', $rec->region_id);
+                 }
+		elseif($comm->a=="cb")
+                {
+                    $model->setAttribute('next', $rec->next);
+                    $model->setAttribute('region_id', $rec->region_id);
+                   
+                }
+		elseif($comm->a=="ci")
+                {
+                     if(!is_null($rec->region_id)) $this->redirect(array('admins'));
+                   $model->setAttribute('next', null);
+                    $model->setAttribute('region_id', $rec->id);
+                    
+                }
+ 
+		$this->render('create',array(
+			'model'=>$model
 		));
 	}
 
@@ -220,10 +258,26 @@ class RegionsController extends Controller
 	public function actionAdmins($id=null)
 	{
 //		$this->layout='//layouts/nocolumn';
-		$model=  Regions::model()->getRegionTree();
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(!is_null($id))
+		{
+                    $line=$id;
+			$comm=json_decode($line);
+                        if(substr($comm->a,0,1)=='m')
+                        {
+                            $model=$this->loadModel($comm->t);
+                            $model->act($comm);
+                        } 
+                        else $this->redirect(array('createin','id'=>$id));
+
+		}
+		$tree=  Regions::model()->getRegionTree();
 		
 		$this->render('admin_svg',array(
-			'model'=>$model,'params'=>$id,
+			'model'=>$tree,'params'=>$comm,
 		));
 	}
 

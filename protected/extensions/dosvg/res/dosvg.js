@@ -109,12 +109,19 @@
 	}
  
  }
+ function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
  function operations(action) {
     doc=document.getElementById("svg_map");
     what=doc.getElementById("box_what");
     where=doc.getElementById("box_where");
     var whatv=$(what).html();
     var wherev=$(where).html();
-    var txt="{t:"+whatv+", e:"+wherev+", a:\""+action+"\"}";
+    if(isNumeric(whatv)) whatv='"t":'+whatv+',';
+    else whatv='';
+    if(isNumeric(wherev)) wherev='"e":'+wherev+',';
+    else wherev='';
+    var txt='{'+whatv+wherev+'"a":"'+action+'"}';
 	if(txt.length>0) document.location.href = "index.php?r=regions/admins&id="+txt;
 }

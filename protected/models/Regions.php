@@ -20,6 +20,17 @@
 class Regions extends CActiveRecord
 {
 	private $_dep = null;
+	private $_next = null;
+	public function getNextname(){
+		if ($this->_next === null && $this->next0 !== null)
+		{
+			$this->_next = $this->next0->name;
+		}
+		return $this->_next;
+	}
+	public function setNextname($value){
+		$this->_next = $value;
+	}
 	public function getParentname(){
 		if ($this->_dep === null && $this->region !== null)
 		{
@@ -80,6 +91,95 @@ class Regions extends CActiveRecord
 			'next0' => array(self::BELONGS_TO, 'Regions', 'next'),
 			'regions1' => array(self::HAS_MANY, 'Regions', 'next'),
 		);
+	}
+	private function donext($id)// change nextof  true: my leader's x-follower; use in after save
+	{
+                  $criteria=new CDbCriteria;
+                  if((is_null($id))||(trim($id)==''))
+		{
+                  $criteria->addCondition('next IS NULL');  
+                   $criteria->addCondition('region_id='.$this->region_id);  
+ 		} 
+                else{
+                   $criteria->addCondition('next='.$id);  
+              }
+                     $criteria->addCondition('NOT(id='.$this->id.")");  
+   			$next=self::find($criteria);
+			if(!is_null($next)){
+                            $next->next=$this->id;
+                            $next->save();
+                        }
+
+	}
+	private function domynext($id)// change next of   my  x-follower; use in before save
+	{
+            $next=self::find('next=:postID', array(':postID'=>$this->id));
+                if(!is_null($next)){
+                    $next->next=$id;
+                    $next->save();
+            }
+	}
+       protected function beforeSave()
+        {
+            if(parent::beforeSave())
+            {
+  //              if($this->isNewRecord)
+                                 return true;
+            }
+            else
+                return false;
+        }
+                protected function afterSave()
+	{
+		parent::afterSave();
+                 if($this->isNewRecord) $this->donext($this->next);
+	}
+	public function act($comm)
+    {
+		if($comm->a=="ma")
+                {
+                    $next=self::find('id=:postID', array(':postID'=>$comm->e));
+                     if($this->next==$next->id) return false;
+                   $this->domynext($this->next); //change my xfollower
+                     $this->donext($comm->e);
+                    $this->next=$comm->e;
+                    $this->region_id=$next->region_id;
+                    $this->save();
+                }
+		elseif($comm->a=="mb")
+                {
+                    $next=self::find('id=:postID', array(':postID'=>$comm->e));
+                    if($this->id==$next->next) return false;
+                    $this->domynext($this->next); //change my xfollower
+                    $this->next=$next->next;
+                    $this->region_id=$next->region_id;
+                    $this->save();
+                    $next->next=$this->id;
+                    $next->save();
+               }
+		elseif($comm->a=="mi")
+                {
+                    $next=self::find('id=:postID', array(':postID'=>$comm->e));
+                    if(!is_null($next->region_id)) return false;
+                    if($this->id==$next->next) return false;
+                    $this->domynext($this->next); //change my xfollower
+                     $criteria=new CDbCriteria;
+                    $criteria->addCondition('region_id='.$comm->e);  
+                    $criteria->addCondition('next is NULL');  
+                    $into=self::find($criteria);
+                    if($into){
+                        $into->next=$this->id;
+                        $into->save();
+                     $this->setAttribute('next', null);
+                    $this->region_id=$next->id;
+                    $this->save();
+                   }
+                      $this->setAttribute('next', null);
+                    $this->region_id=$next->id;
+                    $this->save();
+            }
+            else {return true;}
+                return false;
 	}
 	private function createTree(&$list, $parent){
 	   $tree = array();
@@ -162,9 +262,10 @@ class Regions extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'name' => 'Наименование',
-			'region_id' => 'Region',
-			'next' => 'Next',
+			'region_id' => 'Регион',
+			'next' => 'Идет после',
 			'position' => 'Отметки',
+			'nextname' => 'Идет после',
 			'parentname' => 'Регион',
 		);
 	}

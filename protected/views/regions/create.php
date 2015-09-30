@@ -1,12 +1,12 @@
 <?php
 $this->breadcrumbs=array(
-	'Администрирование регионов'=>array('admin'),
+	'Администрирование регионов'=>array('admins'),
 	'Новый',
 );
 
 $this->menu=array(
 	array('label'=>'Список регионов', 'url'=>array('index')),
-	array('label'=>'Администрирование регионов', 'url'=>array('admin')),
+	array('label'=>'Администрирование регионов', 'url'=>array('admins')),
 );
 ?>
 

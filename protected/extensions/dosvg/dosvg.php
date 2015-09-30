@@ -39,6 +39,7 @@ class dosvg extends CWidget {
 			$ii=0;
 			foreach ($this->tree as $value)
 			{
+                                $this->rows[$ii]=1;
 				if(isset($value['items'])) $arr=$this->getforbush($value['items'],$ii);
 				$ii++;
 			}
@@ -196,7 +197,7 @@ class dosvg extends CWidget {
 		echo ' onmouseout="evt.target.setAttribute(\'opacity\',1);"'. ' />';
 		echo "\n";
 		echo '<a xlink:href="'.$value['link'].'" >'; 
-		echo '<text x="'.($off+35).'" y="25" style="fill:#000;font-size:9pt;">'.$value['name'].'</text>';
+		echo '<text x="'.($off+35).'" y="25" style="fill:#000;font-size:9pt;">';
 		$realname=trim($value['name']);
 		if(mb_strlen($realname,Yii::app()->charset)>18)
 		{
