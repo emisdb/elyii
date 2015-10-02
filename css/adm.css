@@ -1,16 +1,16 @@
-#gtw
+п»ї#gtw
  {
 	position: relative; 
 	text-align: left;
 	font: normal 0.9em arial;
- /*	border: 1px solid #004C6F; Параметры границы */
+ /*	border: 1px solid #004C6F; РџР°СЂР°РјРµС‚СЂС‹ РіСЂР°РЅРёС†С‹ */
 	background-color:#004C6F;
 
 	}
 #gtw td
 { 
 	padding:2px 2px 0px;
-	border: 1px groove gray; /* Параметры границы */
+	border: 1px groove gray; /* РџР°СЂР°РјРµС‚СЂС‹ РіСЂР°РЅРёС†С‹ */
 	text-align:center;
  /* vertical-align:bottom; 	*/
 }
@@ -22,7 +22,7 @@
 { 
 	margin-right: 10px;
 	width:50%;
-	border-right: 1px solid black;  /*Параметры границы */
+	border-right: 1px solid black;  /*РџР°СЂР°РјРµС‚СЂС‹ РіСЂР°РЅРёС†С‹ */
 }
  td.gtwright
 { 
@@ -84,7 +84,7 @@
  	height:465px;
 	overflow-y: scroll; 	
 /*	border: solid 3px #004C6F;
- Добавляем полосы прокрутки */
+ Р”РѕР±Р°РІР»СЏРµРј РїРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё */
 	
 }
 #scrolltab.res
@@ -100,7 +100,7 @@
 #cart_screen {
 	float:right;
 	width: 480px;
-	overflow: auto; /* Добавляем полосы прокрутки */
+	overflow: auto; /* Р”РѕР±Р°РІР»СЏРµРј РїРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё */
  	padding: 5px;
 	font-family: "CenturyGothicRegular", "Century Gothic", Arial, Helvetica, sans-serif;
 	border: solid 1px;
@@ -212,14 +212,14 @@ ul.left_menu li  a:hover {
 }
 #mydialog_buts a
 {
-	border:	2px groove #C0C0C0; /* Параметры границы */
+	border:	2px groove #C0C0C0; /* РџР°СЂР°РјРµС‚СЂС‹ РіСЂР°РЅРёС†С‹ */
 	background-color:#E4E4E4;
 	color:#ffffff;
 	font-weight: bolder;
 }
 #mydialog_buts a:hover
 {
-	border:	border: 2px groove #ffff; /* Параметры границы */
+	border: 2px groove #ffff; /* РџР°СЂР°РјРµС‚СЂС‹ РіСЂР°РЅРёС†С‹ */
 	background-color:#f8f8f8;
 	color:#004C6F;
 
