@@ -8,6 +8,7 @@
  * @property string $name
  * @property integer $region_id
  * @property integer $next
+ * @property string $position
  *
  * The followings are the available model relations:
  * @property Bb[] $bbs
@@ -69,9 +70,10 @@ class Regions extends CActiveRecord
 		return array(
 			array('region_id, next', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>64),
+			array('position', 'length', 'max'=>244),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, region_id, next, parentname', 'safe', 'on'=>'search'),
+			array('id, name, region_id, next, parentname, position', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -90,6 +92,7 @@ class Regions extends CActiveRecord
 			'regions_null' => array(self::HAS_MANY, 'Regions', 'region_id','condition'=>'region_id IS NULL'),
 			'next0' => array(self::BELONGS_TO, 'Regions', 'next'),
 			'regions1' => array(self::HAS_MANY, 'Regions', 'next'),
+			'childCount'=>array(self::STAT, 'Regions', 'region_id'),
 		);
 	}
 	private function donext($id)// change nextof  true: my leader's x-follower; use in after save
@@ -119,17 +122,14 @@ class Regions extends CActiveRecord
                     $next->save();
             }
 	}
-       protected function beforeSave()
-        {
-            if(parent::beforeSave())
-            {
-  //              if($this->isNewRecord)
-                                 return true;
-            }
-            else
-                return false;
-        }
-                protected function afterSave()
+	              protected function beforeDelete()
+	{
+		 if($this->childCount>0) return false;
+			$this->domynext($this->next);		  
+			return parent::beforeDelete();
+		}
+
+                 protected function afterSave()
 	{
 		parent::afterSave();
                  if($this->isNewRecord) $this->donext($this->next);
@@ -178,7 +178,7 @@ class Regions extends CActiveRecord
                     $this->region_id=$next->id;
                     $this->save();
             }
-            else {return true;}
+		else {return true;}
                 return false;
 	}
 	private function createTree(&$list, $parent){
@@ -187,7 +187,7 @@ class Regions extends CActiveRecord
 	   $arr=array();
 	  
 	   foreach ($parent as $k=>$value){
-				$link=chtml::link("x",array('regions/update','id'=>$value->id));
+				$link=CHtml::link("x",array('regions/update','id'=>$value->id));
 				$pos=strpos($link,"href=");
 				$link=  substr($link,$pos+6, strpos($link,"\"",$pos+6)-$pos-6);
 			   $arr=array('name'=>$value->name,
@@ -285,7 +285,9 @@ class Regions extends CActiveRecord
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('region_id',$this->region_id);
 		$criteria->compare('region.name',$this->parentname);
+		$criteria->compare('region.next0',$this->nextname);
 		$criteria->compare('next',$this->next);
+		$criteria->compare('position',$this->position);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

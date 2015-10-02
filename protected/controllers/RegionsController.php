@@ -1,5 +1,4 @@
 <?php
-/**/
 class RegionsController extends Controller
 {
 	/**
@@ -132,7 +131,7 @@ class RegionsController extends Controller
 		{
 			$model->attributes=$_POST['Regions'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('admins'));
 		}
 
 		$this->render('update',array(
@@ -266,10 +265,16 @@ class RegionsController extends Controller
 		{
                     $line=$id;
 			$comm=json_decode($line);
+			$errnote='';
                         if(substr($comm->a,0,1)=='m')
                         {
                             $model=$this->loadModel($comm->t);
                             $model->act($comm);
+                        } 
+                       elseif(substr($comm->a,0,1)=='d')
+                        {
+                            $model=$this->loadModel($comm->t);
+                            if(!$model->delete()) $errnote='Нельзя удалять родителя при наличии детей';
                         } 
                         else $this->redirect(array('createin','id'=>$id));
 
@@ -277,7 +282,7 @@ class RegionsController extends Controller
 		$tree=  Regions::model()->getRegionTree();
 		
 		$this->render('admin_svg',array(
-			'model'=>$tree,'params'=>$comm,
+			'model'=>$tree,'errnote'=>$errnote,
 		));
 	}
 

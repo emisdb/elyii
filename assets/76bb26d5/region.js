@@ -97,8 +97,7 @@ function gofind() {
  }
    function omover (id,x) {
   		$("#k"+id).css('background-position', '-'+x+'px -2px');
-
-						}
+ 						}
   function omout (id) {
 		for (i=0;i<sel_arr.length;i++)
 		{

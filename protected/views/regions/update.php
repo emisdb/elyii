@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $this->breadcrumbs=array(
 	'Администрирование регионов'=>array('admins'),
 	'Update',
@@ -10,6 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Update Regions <?php echo $model->id; ?></h1>
+<h1>Редакция региона<?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

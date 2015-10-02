@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" 
+     onmousemove="coors(evt)"  style="width:680px; height:550px;background-image:url(leningrad_obl_map.png);">
+    <style>
+ polyline.cityroad{fill:none;}
+.city-title{font-size:8pt;font-weight:normal;font-family:Arial Black;}
+.road-title{fill:#f72579;font-size:8pt;font-weight:normal;font-family:Arial Black;}
+</style>
+<script type="text/ecmascript"> 
+  <![CDATA[
+    function coors(evt){
+ 	var posx = 0;
+	var posy = 0;
+	if (evt.pageX || evt.pageY) 	{
+		posx = evt.pageX;
+		posy = evt.pageY;
+	}
+	else if (evt.clientX || evt.clientY) 	{
+		posx = evt.clientX + document.body.scrollLeft
+			+ document.documentElement.scrollLeft;
+		posy = evt.clientY + document.body.scrollTop
+			+ document.documentElement.scrollTop;
+	}
+     var element=evt.target.parentNode.getElementById("box_what");
+     element.firstChild.data=posx;
+     var element=evt.target.parentNode.getElementById("box_where");
+     element.firstChild.data=posy;
+    }
+]]>  
+</script>
+    <rect x="630" y="30" width="40" height="20" style="fill:#eee;stroke:#ccc;stroke-width:2;" />';
+    <text id="box_what" x="640" y="45" style="fill:#888;font-size:10pt;">..</text>';
+    <text x="630" y="20" style="fill:#999;font-size:8pt;">X:</text>';
+    <rect  x="630" y="65" width="40" height="20" style="fill:#eee;stroke:#ccc;stroke-width:2;" />';
+    <text id="box_where" x="640" y="80" style="fill:#888;font-size:10pt;">..</text>';
+    <text x="630" y="60" style="fill:#999;font-size:8pt;">Y:</text>';
+    
+<image x="216" y="268" width="65" height="60" xlink:href="k001.png"></image>
+</svg>

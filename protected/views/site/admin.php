@@ -10,7 +10,7 @@ $this->breadcrumbs=array(
 	<div id="admmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Регионы', 'url'=>array('/regions/admin')),
+				array('label'=>'Регионы', 'url'=>array('/regions/admins')),
 				array('label'=>'Отметки регионов', 'url'=>array('/plan/admin')),
 				array('label'=>'Щиты', 'url'=>array('/bb/admin')),
 				array('label'=>'Типы', 'url'=>array('/bbsides/admin')),

@@ -1,4 +1,5 @@
 <?php
+
 $this->breadcrumbs=array(
 	'Администрирование'=>array('site/admin'),
 	'Регионы',
@@ -14,8 +15,14 @@ $this->breadcrumbs=array(
 ?>
 
 <h1>Управление регионами</h1>
+<?php
+if (strlen($errnote)>0)
+	{ 
+	echo '<div style="border: #f00 groove 3px; color:#f00; width:500px;">'.$errnote."</div>\n";
+}
+?>
 
-<div class="maps" style="overflow-x: scroll;">
+<div class="maps" style="overflow-x: scroll;width:730px;">
 <?php
 
 	$this->widget('ext.dosvg.dosvg',array(
@@ -42,8 +49,10 @@ $this->breadcrumbs=array(
 				array('label'=>'Создать перед', 'url'=>'javascript:void(0)','linkOptions'=>array('onclick'=>'operations("cb");')),
 				array('label'=>'Создать после', 'url'=>'javascript:void(0)','linkOptions'=>array('onclick'=>'operations("ca");')),
 				array('label'=>'Создать в', 'url'=>'javascript:void(0)','linkOptions'=>array('onclick'=>'operations("ci");')),
+				array('label'=>'Удалить', 'url'=>'javascript:void(0)','linkOptions'=>array('onclick'=>'operations("d");')),
 			),
 		)); ?>
-	</div><!-- mainmenu >
+	</div>
+	<!-- mainmenu -->
 
 </div>
