@@ -71,11 +71,11 @@
 						
 				</div> <!--wrap-right-->
 				<p class="clear"/>
+			<div id="footer" style="margin-top:5px;">
+<?php echo trim(Yii::powered()." ver.".Yii::getVersion()); ?> 
+			</div>
 		
 		</div> <!--wrapper-->
-			<div id="footer">
-				
-			</div>
 	</body>
 
 	
