@@ -10,7 +10,7 @@ $this->menu=array(
 );
 ?>
 
-<div id="sel_title" onclick="gogo()">Отбор</div><div id="sel_screen"></div>
+<div id="sel_title" onclick="gogo()">РћС‚Р±РѕСЂ</div><div id="sel_screen"></div>
 <div class="maps" id="map"></div>
 <?php
 	$this->widget('ext.accWidget',array('model'=>$model,

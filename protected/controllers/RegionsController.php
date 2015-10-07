@@ -26,7 +26,7 @@ class RegionsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','map','svg'),
+				'actions'=>array('index','view','map','svg','scale'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -179,6 +179,33 @@ class RegionsController extends Controller
 			}
 		}	
 		$this->render('index_svg',array(
+			'dataProvider'=>$dataProvider,
+			'model'=>$model,
+			'fmodel'=>$cfmodel,
+		));
+	}
+	public function actionScale()
+	{
+		$this->layout='//layouts/scalable';
+		$model=new Regions;
+		$model->unsetAttributes();  // clear any default values
+		$dataProvider=new CActiveDataProvider('Regions');
+		$cfmodel=new FindForm;
+		if(isset($_POST['FindForm']))
+		{
+			$cfmodel->attributes=$_POST['FindForm'];
+			if($bb=$cfmodel->valid())
+			{
+				
+			if (!(is_null($bb)))
+				{
+					header ("Location:".Yii::app()->request->baseUrl."/index.php?r=bb/views&id=".$bb[0]."&side=".$bb[1]);
+					return;
+				}
+
+			}
+		}	
+		$this->render('index_scale',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
 			'fmodel'=>$cfmodel,
